@@ -121,7 +121,7 @@ function slider_shortcode($data): string
               <div class="col-md-4  mb-3 mb-md-0">
               <div class="predictive__search--form ">
             <label>
-              <input name="s" class="predictive__search--input rounded bg-soft-primary border-0" placeholder="مثال: هيونداي اكسنت" type="text">
+              <input name="s" class="predictive__search--input rounded bg-soft-primary border-0 rounded-16" placeholder="مثال: هيونداي اكسنت" type="text">
             </label>
             <button class="predictive__search--button text-dark" aria-label="search button">
               <svg class="product__items--action__btn--svg" xmlns="http://www.w3.org/2000/svg" width="30.51" height="25.443" viewBox="0 0 512 512">

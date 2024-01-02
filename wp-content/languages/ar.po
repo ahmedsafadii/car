@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.4.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-24 10:35:39+0000\n"
+"PO-Revision-Date: 2023-12-25 17:57:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -289,10 +289,29 @@ msgstr "."
 msgid "Uncategorized"
 msgstr "غير مصنف"
 
+#: wp-includes/blocks/post-date/block.json
+msgctxt "block title"
+msgid "Date"
+msgstr "التاريخ"
+
+#: wp-includes/blocks/post-content/block.json
+msgctxt "block title"
+msgid "Content"
+msgstr "المحتوى"
+
+#: wp-includes/blocks/post-author/block.json
+msgctxt "block title"
+msgid "Author"
+msgstr "الكاتب"
+
 #: wp-includes/js/dist/edit-site.js:36176
 #: wp-admin/includes/class-wp-posts-list-table.php:1562
 msgid "Export as JSON"
 msgstr "تصدير بصيغة JSON"
+
+#: wp-includes/js/dist/edit-site.js:26939 wp-admin/menu.php:67
+msgid "Library"
+msgstr "المكتبة"
 
 #: wp-includes/blocks/post-title/block.json
 msgctxt "block title"
@@ -393,6 +412,13 @@ msgctxt "Template name"
 msgid "Search Results"
 msgstr "نتائج البحث"
 
+#: wp-includes/admin-bar.php:1091
+#: wp-admin/includes/class-custom-background.php:67
+#: wp-admin/includes/class-custom-background.php:68 wp-admin/menu.php:236
+msgctxt "custom background"
+msgid "Background"
+msgstr "خلفية"
+
 #: wp-includes/block-editor.php:52
 msgctxt "block category"
 msgid "Patterns"
@@ -402,6 +428,10 @@ msgstr "الأنماط"
 msgctxt "template part area"
 msgid "General"
 msgstr "عام"
+
+#: wp-includes/block-template-utils.php:159
+msgid "Attachment Pages"
+msgstr "صفحات المرفقات"
 
 #: wp-includes/block-template-utils.php:115
 msgctxt "Template name"
@@ -429,6 +459,13 @@ msgstr "تذييل"
 msgctxt "custom image header"
 msgid "Header"
 msgstr "الترويسة"
+
+#: wp-includes/admin-bar.php:171 wp-admin/about.php:43
+#: wp-admin/contribute.php:13 wp-admin/contribute.php:24
+#: wp-admin/contribute.php:36 wp-admin/credits.php:39 wp-admin/freedoms.php:42
+#: wp-admin/privacy.php:36
+msgid "Get Involved"
+msgstr "شارك بالمساهمة معنا"
 
 #: wp-includes/block-template-utils.php:168
 msgid "Displays your site's Privacy Policy page."
@@ -619,6 +656,10 @@ msgstr ": %s"
 msgid "A variety of header designs displaying your site title and navigation."
 msgstr "مجموعة من تصميمات الترويسات تعرض عنوان موقعك والتنقل فيه."
 
+#: wp-includes/block-patterns.php:121
+msgid "Showcase your latest work."
+msgstr "اعرض أحدث أعمالك."
+
 #: wp-includes/block-patterns.php:58
 msgid "Patterns containing mostly text."
 msgstr "الأنماط التي تحتوي على نص في الغالب."
@@ -731,11 +772,11 @@ msgstr "إذا كانت القيمة سلسلة نصية، فإن القيمة �
 msgid "Revisions not enabled."
 msgstr "المراجعات غير مُفعلة."
 
-#: wp-includes/theme.php:4141
+#: wp-includes/theme.php:4104
 msgid "Whether the theme disables generated layout styles."
 msgstr "ما إذا كان القالب يقوم بتعطيل تنسيقات التخطيط التي تم إنشاؤها أم لا."
 
-#: wp-includes/theme.php:3951
+#: wp-includes/theme.php:3914
 msgid "Whether a theme uses block-based template parts."
 msgstr "ما إذا كان القالب يستخدم أجزاء قوالب مستندة إلى المكوّنات."
 
@@ -872,7 +913,7 @@ msgctxt "Block pattern category"
 msgid "Footers"
 msgstr "التذييلات"
 
-#: wp-includes/theme.php:3944
+#: wp-includes/theme.php:3907
 msgid "Whether a theme uses block-based templates."
 msgstr "ما إذا كان القالب يستخدم القوالب المستندة إلى المكوّنات."
 
@@ -943,6 +984,11 @@ msgstr "النبذة التعريفيّة للكاتب."
 msgctxt "block description"
 msgid "Create a link that always points to the homepage of the site. Usually not necessary if there is already a site title link present in the header."
 msgstr "قم بإنشاء رابط يشير دائمًا إلى الصفحة الرئيسية للموقع. غالبًا لا حاجة لذلك إذا كان رابط عنوان الموقع موجود في الترويسة بالفعل."
+
+#: wp-includes/blocks/post-author-biography/block.json
+msgctxt "block title"
+msgid "Author Biography"
+msgstr "سيرة الكاتب"
 
 #: wp-includes/blocks/comments-title/block.json
 msgctxt "block title"
@@ -4485,11 +4531,11 @@ msgstr "تم إنشاء طلب إعادة تعيين كلمة المرور من 
 msgid "The handler for the route is invalid."
 msgstr "الـ handler المتعلق بالمسار غير صالح."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1618
+#: wp-includes/rest-api/class-wp-rest-server.php:1625
 msgid "Could not parse the path."
 msgstr "تعذر تحليل المسار."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1668
+#: wp-includes/rest-api/class-wp-rest-server.php:1675
 msgid "The requested route does not support batch requests."
 msgstr "المسار المطلوب لا يدعم الطلبات بالدفعة."
 
@@ -4501,7 +4547,7 @@ msgstr "نسخة الـ API للمكوّن."
 msgid "Invalid parameters."
 msgstr "المُعامِلات (parameters) غير صالحة."
 
-#: wp-includes/theme.php:2717
+#: wp-includes/theme.php:2680
 msgid "You need to pass an array of post formats."
 msgstr "تحتاج إلى تمرير مصفوفة من صيغ المقال."
 
@@ -4625,7 +4671,7 @@ msgid "Please use %s to add new schema properties."
 msgstr "يرجى استخدام %s لإضافة خصائص مخطط جديدة."
 
 #. translators: %s: prepare_callback
-#: wp-includes/theme.php:3352
+#: wp-includes/theme.php:3315
 msgid "The \"%s\" must be a callable function."
 msgstr "يجب أن تكون \"%s\" دالة قابلة للاستدعاء."
 
@@ -5446,44 +5492,44 @@ msgstr "تخطيطات تنسيق المكوّن."
 msgid "RSS Feed"
 msgstr "خلاصة RSS"
 
-#: wp-includes/theme.php:4277
+#: wp-includes/theme.php:4240
 msgid "The post types that support thumbnails or true if all post types are supported."
 msgstr "أنواع المقالات التي تدعم الصور المصغّرة أو الصحيحة، إذا كانت جميع أنواع المقالات مدعومة."
 
-#: wp-includes/theme.php:3332
+#: wp-includes/theme.php:3295
 msgid "When registering an \"array\" feature, the feature's schema must include the \"items\" keyword."
 msgstr "عند تسجيل ميزة مصفوفة \"array\"، يجب أن يتضمن مخطط الميزة على الكلمة المفتاحية \"items\"."
 
-#: wp-includes/theme.php:3339
+#: wp-includes/theme.php:3302
 msgid "When registering an \"object\" feature, the feature's schema must include the \"properties\" keyword."
 msgstr "عند تسجيل ميزة كائن \"object\"، يجب أن يتضمن مخطط الميزة على الكلمة المفتاحية \"properties\"."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:1013
+#: wp-includes/theme.php:976
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current WordPress version does not meet minimum requirements for %s."
 msgstr "<strong>خطأ:</strong> لا يلبي إصدار ووردبريس الحالي، الحدّ الأدنى لمتطلبات %s."
 
-#: wp-includes/theme.php:3310
+#: wp-includes/theme.php:3273
 msgid "The feature \"type\" is not valid JSON Schema type."
 msgstr "الميزة \"type\" ليست نوع مخطط JSON صالحًا."
 
-#: wp-includes/theme.php:3317
+#: wp-includes/theme.php:3280
 msgid "When registering a \"variadic\" theme feature, the \"type\" must be an \"array\"."
 msgstr "عند تسجيل ميزة قالب \"variadic\"، يجب أن يكون الـ \"type\" عبارة عن مصفوفة \"array\"."
 
-#: wp-includes/theme.php:3325
+#: wp-includes/theme.php:3288
 msgid "When registering an \"array\" or \"object\" feature to show in the REST API, the feature's schema must also be defined."
 msgstr "عند تسجيل ميزة مصفوفة \"array\" أو كائن \"object\" لعرضها في الـ REST API، يجب أيضًا تحديد مخطط الميزة."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:995
+#: wp-includes/theme.php:958
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current WordPress and PHP versions do not meet minimum requirements for %s."
 msgstr "<strong>خطأ:</strong> لا تلبي إصدارات ووردبريس و PHP الحالية، الحدّ الأدنى لمتطلبات %s."
 
 #. translators: %s: Theme name.
-#: wp-includes/theme.php:1004
+#: wp-includes/theme.php:967
 msgctxt "theme"
 msgid "<strong>Error:</strong> Current PHP version does not meet minimum requirements for %s."
 msgstr "<strong>خطأ:</strong> لا يلبي إصدار PHP الحالي، الحدّ الأدنى لمتطلبات %s."
@@ -5726,71 +5772,71 @@ msgstr "حصر النتائج بناءً على العلاقة بين عدة ف�
 msgid "The \"%1$s\" taxonomy \"%2$s\" property (%3$s) conflicts with an existing property on the REST API Posts Controller. Specify a custom \"rest_base\" when registering the taxonomy to avoid this error."
 msgstr "خاصية \"%2$s\" للفئة \"%1$s\" تتعارض (%3$s) مع خاصية موجودة على وحدة تحكّم المقالات REST API. حدّد \"rest_base\" مخصّص عند تسجيل الفئة لتجنب هذا الخطأ."
 
-#: wp-includes/theme.php:4298
+#: wp-includes/theme.php:4261
 msgid "Whether the theme can manage the document title tag."
 msgstr "ما إذا كان القالب باستطاعته إدارة وسم عنوان المستند."
 
-#: wp-includes/theme.php:4231
+#: wp-includes/theme.php:4194
 msgid "Allows use of HTML5 markup for search forms, comment forms, comment lists, gallery, and caption."
 msgstr "يسمح باستخدام أكواد html5 لنماذج البحث، ونماذج التعليقات، وقوائم التعليقات، المعرض، والكلمات التوضيحية."
 
-#: wp-includes/theme.php:4305
+#: wp-includes/theme.php:4268
 msgid "Whether theme opts in to default WordPress block styles for viewing."
 msgstr "ما إذا كان القالب يطبق تنسيقات ووردبريس الافتراضية للمكوّنات عند العرض."
 
-#: wp-includes/theme.php:4149
+#: wp-includes/theme.php:4112
 msgid "Custom color palette if defined by the theme."
 msgstr "لوحة ألوان مخصصة في حال تم تعيينها من القالب."
 
-#: wp-includes/theme.php:4028
+#: wp-includes/theme.php:3991
 msgid "Custom header if defined by the theme."
 msgstr "ترويسة مخصصة في حال تم تعيينها من القالب."
 
-#: wp-includes/theme.php:3958
+#: wp-includes/theme.php:3921
 msgid "Custom background if defined by the theme."
 msgstr "خلفية مخصصة في حال تم تعيينها من القالب."
 
-#: wp-includes/theme.php:4073
+#: wp-includes/theme.php:4036
 msgid "Custom logo if defined by the theme."
 msgstr "شعار مخصص في حال تم تعيينه من القالب."
 
-#: wp-includes/theme.php:4174
+#: wp-includes/theme.php:4137
 msgid "Custom font sizes if defined by the theme."
 msgstr "أحجام خطوط مخصصة في حال تم تعيينها من القالب."
 
-#: wp-includes/theme.php:4199
+#: wp-includes/theme.php:4162
 msgid "Custom gradient presets if defined by the theme."
 msgstr "تخصيص إعدادات مسبقة للتدرّج في حال تم تعيينها من القالب."
 
-#: wp-includes/theme.php:4134
+#: wp-includes/theme.php:4097
 msgid "Whether the theme disables custom gradients."
 msgstr "ما إذا كان القالب يعطّل التدرجات المخصصة."
 
-#: wp-includes/theme.php:4113
+#: wp-includes/theme.php:4076
 msgid "Whether theme opts in to the dark editor style UI."
 msgstr "ما إذا كان القالب يختار تنسيق الوضع الداكن لواجهة المحرر."
 
-#: wp-includes/theme.php:3937
+#: wp-includes/theme.php:3900
 msgid "Whether posts and comments RSS feed links are added to head."
 msgstr "ما إذا كانت روابط خلاصة المقالات والتعليقات RSS تضاف إلى الترويسة."
 
-#: wp-includes/theme.php:4106
+#: wp-includes/theme.php:4069
 msgid "Whether the theme enables Selective Refresh for Widgets being managed with the Customizer."
 msgstr "ما إذا كان القالب يتيح التحديث الانتقائي للودجات التي تتم إدارتها باستخدام أداة التخصيص."
 
-#: wp-includes/theme.php:4120
+#: wp-includes/theme.php:4083
 msgid "Whether the theme disables custom colors."
 msgstr "ما إذا كان القالب يعطل الألوان المخصصة."
 
-#: wp-includes/theme.php:4127
+#: wp-includes/theme.php:4090
 msgid "Whether the theme disables custom font sizes."
 msgstr "ما إذا كان القالب يعطل أحجام الخطوط المخصصة."
 
-#: wp-includes/theme.php:4223
+#: wp-includes/theme.php:4186
 msgid "Whether theme opts in to the editor styles CSS wrapper."
 msgstr "ما إذا كان القالب يختار محرر تنسيقات غلاف CSS."
 
-#: wp-includes/theme.php:3930
+#: wp-includes/theme.php:3893
 msgid "Whether theme opts in to wide alignment CSS class."
 msgstr "ما إذا كان القالب يختار فئة CSS ذات المحاذاة الواسعة."
 
@@ -6941,7 +6987,7 @@ msgstr "عذرًا، غير مسموح لك بقراءة المكوّنات له
 msgid "Attributes for the block."
 msgstr "خصائص المكوّن."
 
-#: wp-includes/theme.php:4291
+#: wp-includes/theme.php:4254
 msgid "Whether the theme supports responsive embedded content."
 msgstr "ما إذا كان القالب يدعم المحتوى المضمّن المتجاوب."
 
@@ -7015,7 +7061,7 @@ msgstr "قالب الرابط الدائم للمقالة."
 msgid "The current user can post unfiltered HTML markup and JavaScript."
 msgstr "يُمكن للمستخدم الحالي نشر أكواد HTML وجافا سكربت غير مُصفاة."
 
-#: wp-includes/theme.php:4254
+#: wp-includes/theme.php:4217
 msgid "Post formats supported."
 msgstr "صيغ المقال مدعومة."
 
@@ -9328,55 +9374,55 @@ msgstr "محتوى التعليق غير صالح."
 msgid "Invalid JSONP callback function."
 msgstr "دالة JSONP غير صالحة"
 
-#: wp-includes/theme.php:1732
+#: wp-includes/theme.php:1695
 msgid "Video is playing."
 msgstr "الفيديو في حالة تشغيل."
 
-#: wp-includes/theme.php:1731
+#: wp-includes/theme.php:1694
 msgid "Video is paused."
 msgstr "الفيديو توقف مؤقتًا."
 
-#: wp-includes/theme.php:2334
+#: wp-includes/theme.php:2297
 msgctxt "Theme starter content"
 msgid "Archives"
 msgstr "الآرشيفات"
 
-#: wp-includes/theme.php:2486
+#: wp-includes/theme.php:2449
 msgctxt "Theme starter content"
 msgid "This is an example of a homepage section. Homepage sections can be any page other than the homepage itself, including the page that shows your latest blog posts."
 msgstr "هذا مثال عن قسم الصفحة الرئيسية. أقسام الصفحة الرئيسية يمكن أن تكون أي صفحة أخرى غير الصفحة الرئيسية نفسها, شاملة الصفحة التي تعرض آخر مقالات مدونتك."
 
-#: wp-includes/theme.php:2478
+#: wp-includes/theme.php:2441
 msgctxt "Theme starter content"
 msgid "News"
 msgstr "الأخبار"
 
-#: wp-includes/theme.php:2469
+#: wp-includes/theme.php:2432
 msgctxt "Theme starter content"
 msgid "This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form."
 msgstr "هذه صفحة تحتوي على بعض معلومات الاتصال الأساسية, مثل العنوان ورقم الهاتف. قد ترغب أيضًا بتثبيت إضافة لعرض نموذج مراسلة."
 
-#: wp-includes/theme.php:2364
+#: wp-includes/theme.php:2327
 msgctxt "Theme starter content"
 msgid "Recent Posts"
 msgstr "أحدث المقالات"
 
-#: wp-includes/theme.php:2358
+#: wp-includes/theme.php:2321
 msgctxt "Theme starter content"
 msgid "Recent Comments"
 msgstr "أحدث التعليقات"
 
-#: wp-includes/theme.php:2453
+#: wp-includes/theme.php:2416
 msgctxt "Theme starter content"
 msgid "Welcome to your site! This is your homepage, which is what most visitors will see when they come to your site for the first time."
 msgstr "مرحبًا بك في موقعك! هذه صفحتك الرئيسية، التي سيراها أغلب الزوار عندما يزورون موقعك لأول مرة."
 
-#: wp-includes/theme.php:2340
+#: wp-includes/theme.php:2303
 msgctxt "Theme starter content"
 msgid "Calendar"
 msgstr "التقويم"
 
-#: wp-includes/theme.php:2352
+#: wp-includes/theme.php:2315
 msgctxt "Theme starter content"
 msgid "Meta"
 msgstr "منوعات"
@@ -9444,27 +9490,27 @@ msgstr "عذراً، غير مسموح لك استعراض عناصر القائ
 msgid "Sorry, you are not allowed to read comments without a post."
 msgstr "عذرًا، غير مسموح لك بقراءة تعليقات بدون مقالة."
 
-#: wp-includes/theme.php:2419
+#: wp-includes/theme.php:2382
 msgctxt "Theme starter content"
 msgid "GitHub"
 msgstr "GitHub"
 
-#: wp-includes/theme.php:2431
+#: wp-includes/theme.php:2394
 msgctxt "Theme starter content"
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: wp-includes/theme.php:2415
+#: wp-includes/theme.php:2378
 msgctxt "Theme starter content"
 msgid "Foursquare"
 msgstr "Foursquare"
 
-#: wp-includes/theme.php:2427
+#: wp-includes/theme.php:2390
 msgctxt "Theme starter content"
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: wp-includes/theme.php:2443
+#: wp-includes/theme.php:2406
 msgctxt "Theme starter content"
 msgid "YouTube"
 msgstr "YouTube"
@@ -9487,12 +9533,12 @@ msgstr "عذرًا, غير مسموح لك بإسناد العناصر المُ�
 msgid "Sorry, you are not allowed to make posts sticky."
 msgstr "عذرًا, غير مسموح لك بتثبيت المقالات."
 
-#: wp-includes/theme.php:2325
+#: wp-includes/theme.php:2288
 msgctxt "Theme starter content"
 msgid "About This Site"
 msgstr "حول هذا الموقع"
 
-#: wp-includes/theme.php:2326
+#: wp-includes/theme.php:2289
 msgctxt "Theme starter content"
 msgid "This may be a good place to introduce yourself and your site or include some credits."
 msgstr "قد يكون هذا مكانًا جيدًا لتقديم نفسك وموقعك أو تضمين بعض الشكر والتقدير."
@@ -9524,97 +9570,97 @@ msgstr "اختيار فيديو"
 msgid "Change video"
 msgstr "تغيير الفيديو"
 
-#: wp-includes/theme.php:2483
+#: wp-includes/theme.php:2446
 msgctxt "Theme starter content"
 msgid "A homepage section"
 msgstr "قسم الصفحة الرئيسية"
 
-#: wp-includes/theme.php:2466
+#: wp-includes/theme.php:2429
 msgctxt "Theme starter content"
 msgid "Contact"
 msgstr "اتصال"
 
-#: wp-includes/theme.php:2474
+#: wp-includes/theme.php:2437
 msgctxt "Theme starter content"
 msgid "Blog"
 msgstr "المدونة"
 
-#: wp-includes/theme.php:2377 wp-includes/theme.php:2450
+#: wp-includes/theme.php:2340 wp-includes/theme.php:2413
 msgctxt "Theme starter content"
 msgid "Home"
 msgstr "الرئيسية"
 
-#: wp-includes/theme.php:2407
+#: wp-includes/theme.php:2370
 msgctxt "Theme starter content"
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: wp-includes/theme.php:2423
+#: wp-includes/theme.php:2386
 msgctxt "Theme starter content"
 msgid "Instagram"
 msgstr "Instagram"
 
-#: wp-includes/theme.php:2458
+#: wp-includes/theme.php:2421
 msgctxt "Theme starter content"
 msgid "About"
 msgstr "حول"
 
-#: wp-includes/theme.php:2435
+#: wp-includes/theme.php:2398
 msgctxt "Theme starter content"
 msgid "Twitter"
 msgstr "تويتر"
 
-#: wp-includes/theme.php:2411
+#: wp-includes/theme.php:2374
 msgctxt "Theme starter content"
 msgid "Facebook"
 msgstr "فيسبوك"
 
-#: wp-includes/theme.php:2439
+#: wp-includes/theme.php:2402
 msgctxt "Theme starter content"
 msgid "Yelp"
 msgstr "Yelp"
 
-#: wp-includes/theme.php:2370
+#: wp-includes/theme.php:2333
 msgctxt "Theme starter content"
 msgid "Search"
 msgstr "بحث"
 
-#: wp-includes/theme.php:2346
+#: wp-includes/theme.php:2309
 msgctxt "Theme starter content"
 msgid "Categories"
 msgstr "التصنيفات"
 
-#: wp-includes/theme.php:2313
+#: wp-includes/theme.php:2276
 msgctxt "Theme starter content"
 msgid "Hours"
 msgstr "الساعات"
 
-#: wp-includes/theme.php:2312
+#: wp-includes/theme.php:2275
 msgctxt "Theme starter content"
 msgid "New York, NY 10001"
 msgstr "نيويورك، 10001"
 
-#: wp-includes/theme.php:2311
+#: wp-includes/theme.php:2274
 msgctxt "Theme starter content"
 msgid "123 Main Street"
 msgstr "123 الشارع الرئيسي"
 
-#: wp-includes/theme.php:2315
+#: wp-includes/theme.php:2278
 msgctxt "Theme starter content"
 msgid "Saturday &amp; Sunday: 11:00AM&ndash;3:00PM"
 msgstr "السبت &amp; الأحد: 11:00ص&ndash;3:00م"
 
-#: wp-includes/theme.php:2314
+#: wp-includes/theme.php:2277
 msgctxt "Theme starter content"
 msgid "Monday&ndash;Friday: 9:00AM&ndash;5:00PM"
 msgstr "الأثنين&ndash;الجمعة: 9:00ص&ndash;5:00م"
 
-#: wp-includes/theme.php:2306
+#: wp-includes/theme.php:2269
 msgctxt "Theme starter content"
 msgid "Find Us"
 msgstr "ابحث عنا"
 
-#: wp-includes/theme.php:2310
+#: wp-includes/theme.php:2273
 msgctxt "Theme starter content"
 msgid "Address"
 msgstr "العنوان"
@@ -10965,7 +11011,7 @@ msgstr "منطقة نص منسق. اضغط Control-Option-H للمساعدة."
 msgid "Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds."
 msgstr "استخدم مفاتيح الأسهم يسار/يمين للتقدم ثانية واحدة، أسهم أعلى/أسفل للتقدم عشر ثواني."
 
-#: wp-includes/script-loader.php:1079 wp-includes/theme.php:1730
+#: wp-includes/script-loader.php:1079 wp-includes/theme.php:1693
 msgid "Play"
 msgstr "تشغيل"
 
@@ -10989,7 +11035,7 @@ msgstr "استخدم مفاتيح الأسهم أعلى/أسفل لزيادة أ
 msgid "Volume Slider"
 msgstr "شريط تمرير مستوى الصوت"
 
-#: wp-includes/script-loader.php:1080 wp-includes/theme.php:1729
+#: wp-includes/script-loader.php:1080 wp-includes/theme.php:1692
 msgid "Pause"
 msgstr "إيقاف مؤقت"
 
@@ -11736,7 +11782,7 @@ msgstr "اسم الكود القصير غير صالح: المُعطى اسم ف
 msgid "Invalid shortcode name: %1$s. Do not use spaces or reserved characters: %2$s"
 msgstr "اسم الكود القصير الغير صالح: %1$s. لا تستخدم فراغات أو أحرف محجوزة: %2$s"
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1418
+#: wp-includes/rest-api/class-wp-rest-server.php:1425
 msgid "The specified namespace could not be found."
 msgstr "تعذر العثور على مساحة التسمية (namespace) المحددة."
 
@@ -11750,7 +11796,7 @@ msgstr "%1$s (منذ %2$s; استخدم %3$s بدلاً عنها)"
 msgid "No route was found matching the URL and request method."
 msgstr "لم يتم العثور على مسار يتوافق مع الرابط URL وطريقة الطلب."
 
-#: wp-includes/rest-api/class-wp-rest-server.php:1741
+#: wp-includes/rest-api/class-wp-rest-server.php:1748
 msgid "The handler for the route is invalid"
 msgstr "الـ handler المتعلق بالمسار غير صالح"
 
@@ -12731,7 +12777,7 @@ msgstr "غير قادر على تقسيم الفئة المشتركة."
 msgid "Taxonomy names must be between 1 and 32 characters in length."
 msgstr "أسماء الفئة يجب أن يكون طولها بين 1 و 32 حرفًا."
 
-#: wp-includes/theme.php:3736
+#: wp-includes/theme.php:3699
 msgid "Customizer"
 msgstr "مخصّص"
 
@@ -12934,7 +12980,7 @@ msgid "Distraction-free writing mode"
 msgstr "نمط الكتابة بدون إلهاء"
 
 #. translators: 1: title-tag, 2: wp_loaded
-#: wp-includes/theme.php:2922
+#: wp-includes/theme.php:2885
 msgid "Theme support for %1$s should be registered before the %2$s hook."
 msgstr "ينبغي أن يُسجل دعم القالب لـ %1$s قبل خُطاف %2$s."
 
@@ -12985,7 +13031,7 @@ msgstr "%s يجب أن يعين إتصالاً مع قاعدة بيانات لل
 msgid "A term with the name provided already exists in this taxonomy."
 msgstr "هناك عنصر بنفس الاسم والاسم اللطيف موجود مسبقًا في هذه الفئة."
 
-#: wp-includes/theme.php:2729
+#: wp-includes/theme.php:2692
 msgid "You need to pass an array of types."
 msgstr "تحتاج إلى تمرير مصفوفة أنواع."
 
@@ -18152,7 +18198,7 @@ msgid "This file is too big. Files must be less than %s KB in size."
 msgstr "هذا الملف كبير للغاية. يجب أن يكون حجم الملفات أقل من %s كيلو بايت."
 
 #: wp-includes/class-wp-editor.php:1370 wp-includes/script-loader.php:1293
-#: wp-includes/theme.php:3735 wp-admin/js/nav-menu.js:1260
+#: wp-includes/theme.php:3698 wp-admin/js/nav-menu.js:1260
 #: wp-admin/js/post.js:512 wp-admin/js/theme-plugin-editor.js:71
 #: wp-admin/js/widgets.js:98
 msgid "The changes you made will be lost if you navigate away from this page."

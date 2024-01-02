@@ -21,7 +21,7 @@
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&amp;family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&amp;display=swap"
     />
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/css/vendor/bootstrap-rtl.min.css"/>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/css/style.css"/>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/css/style.css?v=9"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <?php wp_head(); ?>
 </head>
@@ -234,8 +234,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="primary__btn slider__btn ms-3"
-                               href="<?php echo esc_url(get_permalink(get_page_by_path('purchase-request'))); ?>">
+                            <a class="primary__btn slider__btn ms-3 d-none d-md-inline-block"
+                               href="<?php echo esc_url(get_permalink(get_page_by_path('طلبات-الشركات'))); ?>">
                                 طلب شراء
                             </a>
                         </li>

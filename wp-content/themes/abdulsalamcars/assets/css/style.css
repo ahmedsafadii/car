@@ -242,7 +242,7 @@ h4 {
 
 .h5,
 h5 {
-    font-weight: 400
+    font-weight: 600
 }
 
 .h6,
@@ -796,7 +796,6 @@ select {
 .section__heading
 span {
     color: #9F9F9F;
-    padding-bottom: 1.2rem;
 }
 
 .section__heading--maintitle span {
@@ -1965,6 +1964,11 @@ header + main {
     padding-top: 110px;
 }
 
+@media only screen and (max-width: 768px) {
+header + main {
+  padding-top: 85px;
+}
+}
 .main__header {
     padding: 30px 0
 }
@@ -2207,8 +2211,8 @@ header + main {
 }
 
 @media only screen and (min-width: 1200px) {
-    .predictive__search--input {
-        height: 5rem
+   .search__filter--inner .predictive__search--input {
+        height: 6rem
     }
 }
 
@@ -2288,7 +2292,10 @@ header + main {
 }
 
 .header__account--btn {
-    position: relative
+    position: relative;
+  background: #FBF6F6;
+  padding: 11px;
+  border-radius: 50%;
 }
 
 .header__account--btn:hover {
@@ -8692,7 +8699,7 @@ input.quickview__value--number {
 
 @media only screen and (min-width: 992px) {
     .widget__title {
-        margin-bottom: 2.5rem
+        margin-bottom: 2rem
     }
 }
 
@@ -8960,6 +8967,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb {
     border: 1px solid #eee;
     padding: 4px 9px;
     border-radius: 5px;
+	font-size:13px
 }
 
 .rangeslider .right {
@@ -9676,8 +9684,9 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb {
 
 .product__media--view__icon {
     position: absolute;
-    bottom: 2rem;
-    left: 2rem
+    bottom: 10rem;
+    left: 2rem;
+	z-index:1
 }
 
 .product__media--view__icon--link {
@@ -10441,7 +10450,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb {
 }
 
 span.info__list--item-head {
-    width: 12rem
+    width: 18rem
 }
 
 ul.additional__info_list {
@@ -13317,15 +13326,35 @@ details > summary::-webkit-details-marker {
 .companies-forms .comp__form--list .comp__form--input::placeholder {
     color: #ccc;
 }
-
-.predictive__search--form .predictive__search--input {
+/*.predictive__search--form .predictive__search--input {
     border-radius: 0 35px 35px 0 !important;
-}
-
+}*/
 .widget__form--check__list .active {
-    color: #d7442a!important;
+    background: #d7442a!important;
+	color:#fff!important
 }
 
-.single__widget .widget__form--check__list {
-    padding-top: 15px;
+#live-chat {
+  position: fixed;
+  bottom: 5rem;
+  left: calc(1rem - ((2.9375rem - 2.25rem)/2));
+  z-index: 10;
+}
+@media (min-width: 1024px) {
+  #live-chat {
+    bottom: 2rem;
+    left: calc(2rem - ((2.9375rem - 2.25rem)/2));
+  }
+}
+#live-chat a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #1ed743;
+  border-radius: 50%;
 }

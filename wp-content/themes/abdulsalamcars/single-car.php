@@ -71,19 +71,7 @@
                                                     <img class="product__media--preview__items--img"
                                                          src="<?= $gallery['url'] ?>"
                                                          alt="product-media-img"></a>
-                                                <div class="product__media--view__icon">
-                                                    <a class="product__media--view__icon--link glightbox"
-                                                       href="<?= $gallery['url'] ?>"
-                                                       data-gallery="product-media-preview">
-                                                        <span class="">السيارة من الداخل</span>
-                                                        <svg width="22" height="22" viewBox="0 0 17 17" fill="none"
-                                                             xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M7.01859 5.14617C6.73113 4.88082 6.283 4.89874 6.01765 5.1862L3.72919 7.66534C3.47873 7.93667 3.47872 8.3549 3.72919 8.62623L6.01765 11.1054C6.28299 11.3929 6.73113 11.4108 7.01858 11.1455C7.30604 10.8801 7.32397 10.432 7.05863 10.1445L5.86749 8.85412L12.7497 8.85412C13.1409 8.85412 13.458 8.53699 13.458 8.14579C13.458 7.75459 13.1409 7.43746 12.7497 7.43746L5.86751 7.43746L7.05862 6.1471C7.32397 5.85965 7.30604 5.41151 7.01859 5.14617Z"
-                                                                  fill="#0B0B0B"/>
-                                                        </svg>
-                                                    </a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <?php
@@ -123,7 +111,22 @@
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
+							<div class="product__media--view__icon">
+                                                    <a class="product__media--view__icon--link glightbox"
+                                                       href="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                       data-gallery="product-media-preview2">
+                                                        <span class="">السيارة من الداخل</span>
+                                                        <svg width="22" height="22" viewBox="0 0 17 17" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                  d="M7.01859 5.14617C6.73113 4.88082 6.283 4.89874 6.01765 5.1862L3.72919 7.66534C3.47873 7.93667 3.47872 8.3549 3.72919 8.62623L6.01765 11.1054C6.28299 11.3929 6.73113 11.4108 7.01858 11.1455C7.30604 10.8801 7.32397 10.432 7.05863 10.1445L5.86749 8.85412L12.7497 8.85412C13.1409 8.85412 13.458 8.53699 13.458 8.14579C13.458 7.75459 13.1409 7.43746 12.7497 7.43746L5.86751 7.43746L7.05862 6.1471C7.32397 5.85965 7.30604 5.41151 7.01859 5.14617Z"
+                                                                  fill="#0B0B0B"/>
+                                                        </svg>
+                                                    </a>
+								<a class="product__media--view__icon--link glightbox"  href="https://images.unsplash.com/photo-1498595718608-0981b1355981?q=80&w=2121&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-gallery="product-media-preview2"> </a>
+                                                </div>
                         </div>
+						
                     </div>
                     <div class="col-md-5 border rounded-16 p-5">
                         <div class="product__details--info ">

@@ -181,7 +181,7 @@ if (!empty($_GET['car_brand_id'])) {
                    <span class="final__price d-block">' . $final_price_with_vat . ' ريال بعد الضريبة</span>';
                                                     }
                                                     ?>
-                                                    <div class="col-6 col-md-3 mb-30">
+                                                    <div class="col-6 col-md-4 mb-30">
 
                                                         <article class="product__card">
                                                             <div class="product__card--thumbnail">
@@ -195,7 +195,7 @@ if (!empty($_GET['car_brand_id'])) {
                                                             <div class="product__card--content">
                                                                 <div class="d-flex justify-content-between">
                                                                     <div>
-                                                                        <h3 class="product__card--title h4">
+                                                                        <h3 class="product__card--title h5">
                                                                             <a href="<?= $post_permalink; ?>"><?= $post_title; ?></a>
                                                                         </h3>
                                                                         <ul class="d-flex gap-2">

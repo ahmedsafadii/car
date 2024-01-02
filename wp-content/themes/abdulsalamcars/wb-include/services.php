@@ -115,7 +115,7 @@ function services_shortcode($data): string
             </div>
             <div class="services__bar ">
                 <div class="">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="36" height="47" viewbox="0 0 36 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +131,7 @@ function services_shortcode($data): string
                     </div>
                 </div>
                 <div class="">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="43" height="36" viewbox="0 0 43 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +143,7 @@ function services_shortcode($data): string
                     </div>
                 </div>
                 <div class="">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="51" height="40" viewbox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@ function services_shortcode($data): string
                     </div>
                 </div>
                 <div class="">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="50" height="31" viewbox="0 0 50 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +167,7 @@ function services_shortcode($data): string
                     </div>
                 </div>
                 <div class="  ">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="53" height="36" viewbox="0 0 53 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +179,7 @@ function services_shortcode($data): string
                     </div>
                 </div>
                 <div class="  ">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="34" height="45" viewbox="0 0 34 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +192,7 @@ function services_shortcode($data): string
                     </div>
                 </div>
                 <div class="  ">
-                    <div class="categories__card text-center">
+                    <div class="categories__card text-center rounded-16">
                         <a class="categories__card--link" href="#">
                             <span class="categories__icon mb-3">
                                 <svg width="53" height="36" viewbox="0 0 53 36" fill="none" xmlns="http://www.w3.org/2000/svg">
