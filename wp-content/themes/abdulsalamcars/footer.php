@@ -351,13 +351,13 @@ $footer_copyright = get_field('as-copyright-text', 'option');
                 minBtn.val(maxVal - 5);
                 minVal = maxVal - 5;
             }
-            rangeMin.html(addSeparator(minVal * 1000) + ' ريال');
+            rangeMin.html(addSeparator(minVal) + ' ريال');
 
             if (origin === 'max' && maxVal < minVal + 5) {
                 maxBtn.val(minVal + 5);
                 maxVal = minVal + 5;
             }
-            rangeMax.html(addSeparator(maxVal * 1000) + ' ريال');
+            rangeMax.html(addSeparator(maxVal) + ' ريال');
         }
 
         $('input[type="range"]').on('input', rangeInputChangeEventHandler);

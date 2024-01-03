@@ -13358,3 +13358,7 @@ details > summary::-webkit-details-marker {
   background-color: #1ed743;
   border-radius: 50%;
 }
+
+.price__filter {
+    padding: 2rem 0rem!important;
+}

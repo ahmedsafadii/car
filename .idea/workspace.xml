@@ -3,65 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cab4d049-4605-4498-9906-a3fade65d17f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-admin/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-admin/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-admin/css/about-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-admin/css/about-rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-admin/css/about-rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-admin/css/about-rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-admin/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-admin/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-admin/css/about.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-admin/css/about.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/admin-ar.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/admin-ar.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-0ce75ad2f775d1cac9696967d484808c.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-0ce75ad2f775d1cac9696967d484808c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-17179a5f2930647c89151e365f843b6e.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-17179a5f2930647c89151e365f843b6e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-1780a2033cf98d69ce13c2e5c8510004.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-1780a2033cf98d69ce13c2e5c8510004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-1a0cd6a7128913b15c1a10dd68951869.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-1a0cd6a7128913b15c1a10dd68951869.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-1bba9045bb07c89671c88a3f328548e8.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-1bba9045bb07c89671c88a3f328548e8.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-2617ce121227a46077ede6c69aa9fcb5.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-2617ce121227a46077ede6c69aa9fcb5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-270d72d1cff17227d37f3244759cbecb.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-270d72d1cff17227d37f3244759cbecb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-28b3c3d595952907e08d98287077426c.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-28b3c3d595952907e08d98287077426c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-2c5d274ea625dd91556554ad82901529.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-2c5d274ea625dd91556554ad82901529.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-320f4ad9792aaa6dedb1e71cbdf85d57.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-320f4ad9792aaa6dedb1e71cbdf85d57.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-440127dd25bde48a531ded36f33e927b.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-440127dd25bde48a531ded36f33e927b.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-49c6d4acf36cf3aca9f0b2a77617304f.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-49c6d4acf36cf3aca9f0b2a77617304f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-60d06fac6f98e8e8f0ec5a945738b660.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-60d06fac6f98e8e8f0ec5a945738b660.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-68f2cec7514bf8563c723a4d675fcfe6.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-68f2cec7514bf8563c723a4d675fcfe6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-7233008897033de5ee0d14f86a42a65a.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-7233008897033de5ee0d14f86a42a65a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-7289286ed59e90a8f36ae797df62220b.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-7289286ed59e90a8f36ae797df62220b.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-7b74c8457eaa7fcc50db41b431f8a003.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-7b74c8457eaa7fcc50db41b431f8a003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-7f13c36c641b114bf18cd0bcc9ecc7e0.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-7f13c36c641b114bf18cd0bcc9ecc7e0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-803bf1ce2131e13efc590c1bc47851fc.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-803bf1ce2131e13efc590c1bc47851fc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-81c889563f09dd13de1701135dc62941.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-81c889563f09dd13de1701135dc62941.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-8860e58c20c6a2ab5876a0f07be43bd9.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-8860e58c20c6a2ab5876a0f07be43bd9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-93882e8f9976382d7f724ac595ed7151.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-93882e8f9976382d7f724ac595ed7151.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-947c76bb5095da30e16668eec15406b2.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-947c76bb5095da30e16668eec15406b2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-a25d1cc7bf7ca0b4e114f6bea64943f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-a25d1cc7bf7ca0b4e114f6bea64943f4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-ac23eee47530ac63a1178c827db28087.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-ac23eee47530ac63a1178c827db28087.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-bf0f094965d3d4a95b47babcb35fc136.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-bf0f094965d3d4a95b47babcb35fc136.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-bf23b24175490c2e46aaf92ff6a0c70f.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-bf23b24175490c2e46aaf92ff6a0c70f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-c31d5f185753910c14afebc6deb2ce24.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-c31d5f185753910c14afebc6deb2ce24.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-daeb084aab42199d26393a56c3465bc0.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-daeb084aab42199d26393a56c3465bc0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-e2791ba830489d23043be8650a22a22b.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-e2791ba830489d23043be8650a22a22b.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-e53526243551a102928735ec9eed4edf.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-e53526243551a102928735ec9eed4edf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-f575f481034e90e21d832e415fd95fcf.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-f575f481034e90e21d832e415fd95fcf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-f70806bf0c7d62f2908bd5a1c3fe4efc.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-f70806bf0c7d62f2908bd5a1c3fe4efc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar-f8f49d9fc4a9cf7d78ec99285417bd9c.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar-f8f49d9fc4a9cf7d78ec99285417bd9c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar.mo" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/languages/ar.po" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/languages/ar.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/archive-car.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/archive-car.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/single-car.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/single-car.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/wb-include/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/wb-include/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/wb-include/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/wb-include/slider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/block-patterns.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/block-patterns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/block-template-utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/block-template-utils.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/html-api/class-wp-html-tag-processor.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/html-api/class-wp-html-tag-processor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/html-api/class-wp-html-token.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/html-api/class-wp-html-token.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/ms-blogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/ms-blogs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/rest-api/class-wp-rest-server.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/rest-api/class-wp-rest-server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/theme.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-includes/version.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/version.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/wb-include/brands.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/abdulsalamcars/wb-include/brands.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +91,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\xampp\htdocs\car</wordpressPath>

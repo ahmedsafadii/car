@@ -16,10 +16,10 @@ $body_type = $_GET['body_type'] ?? '';
 $manufacture_year = $_GET['manufacture_year'] ?? '';
 $engine = $_GET['engine_capacity'] ?? '';
 
-if (empty($search_term) && empty($car_brand_id) && !(isset($_GET['discount']))) {
+/*if (empty($search_term) && empty($car_brand_id) && !(isset($_GET['discount']))) {
     wp_redirect(home_url());
     exit;
-}
+}*/
 
 $args = array(
     'post_type' => 'car',
@@ -36,12 +36,35 @@ if (!empty($search_term)) {
     $args['s'] = $search_term;
 }
 
+$price_min_max_query = array(
+    'post_type' => 'car',
+    'posts_per_page' => 1,
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
+    'meta_key' => 'as-car-details_as-car-price',
+    'fields' => 'ids',
+);
+
+$min_max_prices = get_posts($price_min_max_query);
+
+$min_price = !empty($min_max_prices) ? get_post_meta($min_max_prices[0], 'as-car-details_as-car-price', true) : 0;
+
+$price_min_max_query['order'] = 'DESC';
+
+$min_max_prices = get_posts($price_min_max_query);
+
+$max_price = !empty($min_max_prices) ? get_post_meta($min_max_prices[0], 'as-car-details_as-car-price', true) : 0;
+
+
 if ($price_from || $price_to) {
     $price_query = array('key' => 'as-car-details_as-car-price', 'type' => 'NUMERIC');
     if ($price_from) $price_query['value'][] = $price_from;
     if ($price_to) $price_query['value'][] = $price_to;
     $price_query['compare'] = count($price_query['value']) === 2 ? 'BETWEEN' : (isset($price_query['value'][0]) ? '>=' : '<=');
     $args['meta_query'][] = $price_query;
+} else {
+    $price_from = $min_price;
+    $price_to = $max_price;
 }
 
 if (isset($_GET['discount'])) {
@@ -75,13 +98,7 @@ if ($car_brand_id) {
         'terms' => $car_brand_id,
     );
 }
-if ($car_brand_id) {
-    $args['tax_query'][] = array(
-        'taxonomy' => 'brand',
-        'field' => 'term_id',
-        'terms' => $car_brand_id,
-    );
-}
+
 if ($car_model_id) {
     $args['tax_query'][] = array(
         'taxonomy' => 'brand',
@@ -89,6 +106,7 @@ if ($car_model_id) {
         'terms' => $car_model_id,
     );
 }
+
 if ($manufacture_year) {
     $args['tax_query'][] = array(
         'taxonomy' => 'manufacturing-year',
@@ -96,6 +114,7 @@ if ($manufacture_year) {
         'terms' => $manufacture_year,
     );
 }
+
 if ($engine) {
     $args['tax_query'][] = array(
         'taxonomy' => 'engine-capacity',
@@ -130,42 +149,88 @@ $search_result_query = new WP_Query($args);
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4 shop-col-width-lg-4 border rounded-16">
-                    <div class="shop__sidebar--widget widget__area d-none d-lg-block">
-                        <h2 class=" h3 pt-5">الفلاتر</h2>
-                        <h2 class=" h4 pt-5">الموديلات</h2>
+                    <form method="GET" action="">
+                        <div class="shop__sidebar--widget widget__area d-none d-lg-block">
+                            <h2 class="  py-5">الفلاتر</h2>
+                        </div>
+                        <div class="predictive__search--form mb-3">
+                            <label>
+                                <input class="predictive__search--input rounded-16"
+                                       name="s"
+                                       value="<?= $_GET['s'] ?? '' ?>"
+                                       placeholder="مثال: هوندا" type="text">
+                            </label>
+                            <button class="predictive__search--button text-dark" aria-label="search button">
+                                <svg class="product__items--action__btn--svg" xmlns="http://www.w3.org/2000/svg"
+                                     width="30.51" height="25.443" viewBox="0 0 512 512">
+                                    <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                                          fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                          stroke-width="32"></path>
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                          stroke-miterlimit="10" stroke-width="32"
+                                          d="M338.29 338.29L448 448"></path>
+                                </svg>
+                            </button>
+                        </div>
                         <div class="single__widget widget__bg">
-                            <ul class="widget__form--check model-filter-list">
-                                <li class="widget__form--check__list">
-                                    <a href="<?= esc_url(add_query_arg('car_model_id', '', $_SERVER['REQUEST_URI'])) ?>">
-                                        <span class="<?= empty($_GET['car_model_id']) ? 'active' : '' ?>">جميع الموديلات</span>
-                                    </a>
-                                </li>
+                            <h2 class="widget__title h4">العلامات التجارية</h2>
+                            <ul class="widget__form--check">
                                 <?php
-                                $car_models = get_terms(array(
-                                    'taxonomy' => 'brand',
-                                    'parent' => $_GET['car_brand_id'],
-                                    'hide_empty' => false
-                                ));
+                                if ($car_brand_id) {
+                                    $car_models = get_terms(array(
+                                        'taxonomy' => 'brand',
+                                        'parent' => $car_brand_id,
+                                        'hide_empty' => true
+                                    ));
+                                    $car_text_type = 'car_model_id';
+                                } else if ($car_model_id) {
+                                    $term = get_term($car_model_id, 'brand');
+                                    if ($term && !is_wp_error($term) && $term->parent !== 0) {
+                                        $car_brand_id = $term->parent;
+                                    }
+                                    $car_models = get_terms(array(
+                                        'taxonomy' => 'brand',
+                                        'parent' => $car_brand_id,
+                                        'hide_empty' => true
+                                    ));
+                                    $car_text_type = 'car_model_id';
+                                } else {
+                                    $car_models = get_terms(array(
+                                        'taxonomy' => 'brand',
+                                        'parent' => 0,
+                                        'hide_empty' => true
+                                    ));
+                                    $car_text_type = 'car_brand_id';
+                                }
+                                ?>
+                                <?php
                                 foreach ($car_models as $model) {
-                                    $active_class = isset($_GET['car_model_id']) && $_GET['car_model_id'] == $model->term_id ? 'active' : '';
-                                    $model_url = add_query_arg('car_model_id', $model->term_id, $_SERVER['REQUEST_URI']);
+                                    $term_posts_count = $model->count;
+                                    $checked = isset($_GET['car_model_id']) && $_GET['car_model_id'] == $model->term_id ? 'checked' : '';
                                     ?>
                                     <li class="widget__form--check__list">
-                                        <a href="<?= esc_url($model_url) ?>">
-                                            <span class="<?= $active_class ?>"><?= esc_html($model->name) ?></span>
-                                        </a>
+                                        <label class="widget__form--check__label"
+                                               for="check_<?= esc_html($model->term_id) ?>"><?= esc_html($model->name) ?>
+                                            <span class="text-muted small">(<?= $term_posts_count ?>)</span></label>
+                                        <input class="widget__form--check__input"
+                                               name="<?= $car_text_type ?>"
+                                               id="check_<?= esc_html($model->term_id) ?>"
+                                               value="<?= $model->term_id ?>"
+                                               type="radio" <?= $checked; ?>>
+                                        <span class="widget__form--checkmark"></span>
                                     </li>
                                     <?php
                                 }
                                 ?>
                             </ul>
                         </div>
-                        <h2 class=" h4 pt-5">سنة الصنع</h2>
                         <div class="single__widget widget__bg">
-                            <ul class="widget__form--check model-filter-list">
-                                <li class="widget__form--check__list">
-                                    <a href="<?= esc_url(add_query_arg('manufacture_year', '', $_SERVER['REQUEST_URI'])) ?>">
-                                        <span class="<?= empty($_GET['manufacture_year']) ? 'active' : '' ?>">جميع السنوات</span>
+                            <h2 class="widget__title h4">سنة الصنع</h2>
+                            <ul class="widget__tagcloud">
+                                <li class="widget__tagcloud--list">
+                                    <a class="widget__tagcloud--link <?= empty($_GET['manufacture_year']) ? 'active-filter' : ''; ?>"
+                                       href="<?= esc_url(add_query_arg('manufacture_year', '', $_SERVER['REQUEST_URI'])) ?>">
+                                        الكل
                                     </a>
                                 </li>
                                 <?php
@@ -178,8 +243,9 @@ $search_result_query = new WP_Query($args);
                                     $year_url = add_query_arg('manufacture_year', $year->slug, $_SERVER['REQUEST_URI']);
                                     ?>
                                     <li class="widget__form--check__list">
-                                        <a href="<?= esc_url($year_url) ?>">
-                                            <span class="<?= $active_class ?>"><?= esc_html($year->name) ?></span>
+                                        <a href="<?= esc_url($year_url) ?>"
+                                           class="widget__tagcloud--link <?= $active_class ?>">
+                                            <span><?= esc_html($year->name) ?></span>
                                         </a>
                                     </li>
                                     <?php
@@ -187,12 +253,12 @@ $search_result_query = new WP_Query($args);
                                 ?>
                             </ul>
                         </div>
-                        <h2 class=" h4 pt-5">سعة المحركة</h2>
                         <div class="single__widget widget__bg">
-                            <ul class="widget__form--check model-filter-list">
-                                <li class="widget__form--check__list">
-                                    <a href="<?= esc_url(add_query_arg('engine_capacity', '', $_SERVER['REQUEST_URI'])) ?>">
-                                        <span class="<?= empty($_GET['engine_capacity']) ? 'active' : '' ?>">جميع المحركات</span>
+                            <h2 class="widget__title h4">سعة المحركة</h2>
+                            <ul class="widget__tagcloud">
+                                <li class="widget__tagcloud--list">
+                                    <a class="widget__tagcloud--link <?= empty($_GET['engine_capacity']) ? 'active-filter' : ''; ?>"
+                                       href="<?= esc_url(add_query_arg('engine_capacity', '', $_SERVER['REQUEST_URI'])) ?>">الكل
                                     </a>
                                 </li>
                                 <?php
@@ -205,37 +271,36 @@ $search_result_query = new WP_Query($args);
                                     $engine_url = add_query_arg('engine_capacity', $engine->slug, $_SERVER['REQUEST_URI']);
                                     ?>
                                     <li class="widget__form--check__list">
-                                        <a href="<?= esc_url($engine_url) ?>">
-                                            <span class="<?= $active_class ?>"><?= esc_html($engine->name) ?></span>
+                                        <a href="<?= esc_url($engine_url) ?>"
+                                           class="widget__tagcloud--link <?= $active_class ?>">
+                                            <span class=""><?= esc_html($engine->name) ?></span>
                                         </a>
                                     </li>
                                     <?php
                                 }
                                 ?>
+
                             </ul>
                         </div>
-                        <h2 class=" h4 pt-5">نطاق السعر</h2>
                         <div class="single__widget price__filter widget__bg">
-                            <div class="filter">
-                                <div class="filter__label">
-                                    <label class="filter__input_title">
-                                        <span>من:</span>
-                                        <input type="number" class="filter__input" id="filter__input_from"
-                                               name="priceFrom" value="<?= $_GET['price_from'] ?? 0 ?>">
-                                    </label>
-
-                                    <label class="filter__input_title">
-                                        <span>الى:</span>
-                                        <input type="number" class="filter__input" id="filter__input_to" name="priceTo"
-                                               value="<?= $_GET['price_to'] ?? 0 ?>">
-                                    </label>
-                                </div>
-                                <a href="#" id="applyPriceFilter" class="btn btn-primary">تطبيق</a>
+                            <div class="rangeslider">
+                                <input class="min" name="price_from" type="range" min="<?= $min_price ?>"
+                                       max="<?= $max_price ?>" value="<?= $price_from ?>">
+                                <input class="max" name="price_to" type="range" min="<?= $min_price ?>"
+                                       max="<?= $max_price ?>" value="<?= $price_to ?>">
+                                <span class="range_min light left"><?= $price_from ?> ريال</span>
+                                <span class="range_max light right"><?= $price_to ?> ريال</span>
                             </div>
                         </div>
                         <div class="single__widget widget__bg">
                             <h2 class="widget__title h4">الوقود</h2>
                             <ul class="widget__tagcloud">
+                                <li class="widget__tagcloud--list">
+                                    <a class="widget__tagcloud--link <?= empty($_GET['fuel_type']) ? 'active-filter' : ''; ?>"
+                                       href="<?= esc_url(add_query_arg('fuel_type', '', $_SERVER['REQUEST_URI'])) ?>">
+                                        الكل
+                                    </a>
+                                </li>
                                 <li class="widget__tagcloud--list">
                                     <a class="widget__tagcloud--link <?= isset($_GET['fuel_type']) && $_GET['fuel_type'] == 'بنزين' ? 'active-filter' : '' ?>"
                                        href="<?= esc_url(add_query_arg('fuel_type', 'بنزين', $_SERVER['REQUEST_URI'])) ?>">
@@ -259,6 +324,12 @@ $search_result_query = new WP_Query($args);
                         <div class="single__widget widget__bg">
                             <h2 class="widget__title h4">نوع الجسم</h2>
                             <ul class="widget__tagcloud">
+                                <li class="widget__tagcloud--list">
+                                    <a class="widget__tagcloud--link <?= empty($_GET['body_type']) ? 'active-filter' : ''; ?>"
+                                       href="<?= esc_url(add_query_arg('body_type', '', $_SERVER['REQUEST_URI'])) ?>">
+                                        الكل
+                                    </a>
+                                </li>
                                 <li class="widget__tagcloud--list">
                                     <a class="widget__tagcloud--link <?= isset($_GET['body_type']) && $_GET['body_type'] == 'هاتشباك' ? 'active-filter' : '' ?>"
                                        href="<?= esc_url(add_query_arg('body_type', 'هاتشباك', $_SERVER['REQUEST_URI'])) ?>">
@@ -293,13 +364,23 @@ $search_result_query = new WP_Query($args);
                         </div>
                         <div class="single__widget widget__bg">
                             <h2 class="widget__title h4">عروض خاصة</h2>
-                            <label>
-                                <input type="checkbox"
-                                       id="discountFilter" <?= isset($_GET['discount']) ? 'checked' : '' ?>>
-                                عرض فقط السيارات مع الخصم
-                            </label>
+                            <div class="widget__form--check__list">
+                                <label class="widget__form--check__label" for="discount">عرض فقط السيارات مع
+                                    الخصم</label>
+                                <input class="widget__form--check__input"
+                                       id="discount"
+                                       name="discount" <?= isset($_GET['discount']) ? 'checked' : '' ?>
+                                       type="checkbox">
+                                <span class="widget__form--checkmark"></span>
+
+                            </div>
                         </div>
-                    </div>
+                        <div class="single__widget widget__bg">
+                            <button type="submit" class="primary__btn slider__btn  w-100 d-block">
+                                تطبيق الفلاتر
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-xl-9 col-lg-8 shop-col-width-lg-8">
                     <div class="shop__right--sidebar">
@@ -370,7 +451,7 @@ $search_result_query = new WP_Query($args);
                    <span class="final__price d-block">' . $final_price_with_vat . ' ريال بعد الضريبة</span>';
                                                     }
                                                     ?>
-                                                    <div class="col-6 col-md-3 mb-30">
+                                                    <div class="col-6 col-md-4 mb-30">
 
                                                         <article class="product__card">
                                                             <div class="product__card--thumbnail">
@@ -446,35 +527,5 @@ $search_result_query = new WP_Query($args);
             window.location.href = currentUrl.href;
         });
     });
-    document.getElementById('applyPriceFilter').addEventListener('click', function () {
-        var baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
-        var queryParams = new URLSearchParams(window.location.search);
-
-        var priceFrom = document.getElementById('filter__input_from').value;
-        var priceTo = document.getElementById('filter__input_to').value;
-
-        if (priceFrom) queryParams.set('price_from', priceFrom);
-        if (priceTo) queryParams.set('price_to', priceTo);
-
-        window.location.href = baseUrl + '?' + queryParams.toString();
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-        var discountCheckbox = document.getElementById('discountFilter');
-
-        discountCheckbox.addEventListener('change', function () {
-            var currentUrl = new URL(window.location.href);
-            var queryParams = new URLSearchParams(currentUrl.search);
-
-            if (this.checked) {
-                queryParams.set('discount', '1');
-            } else {
-                queryParams.delete('discount');
-            }
-
-            currentUrl.search = queryParams.toString();
-            window.location.href = currentUrl.href;
-        });
-    });
-
 </script>
 <?php get_footer(); ?>

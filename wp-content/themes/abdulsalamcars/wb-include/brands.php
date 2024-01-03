@@ -52,7 +52,7 @@ function brands_shortcode($data): string
         $image = get_field('car-logo', $term->taxonomy . '_' . $term->term_id);
 
         $terms_data .= '<div class="categories__card--style3 text-center">
-              <a class="categories__card--link" href="'.esc_url(get_post_type_archive_link('car')).'?car_brand_id='.$term->term_id.'">
+              <a class="categories__card--link" href="/?s=&car_brand_id='.$term->term_id.'">
                 <div class="categories__thumbnail">
                   <img
                     class="categories__thumbnail--img"
